@@ -1,5 +1,5 @@
 # Use latest node
-FROM node:boron
+FROM arm32v6/node:12.6.0-alpine
 
 MAINTAINER koalazak <zak.tux@gmail.com>
 
