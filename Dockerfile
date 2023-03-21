@@ -1,7 +1,7 @@
 # Use latest node
-FROM arm32v6/node:12.6.0-alpine
+FROM arm32v6/node:10.23-alpine
 
-MAINTAINER koalazak <zak.tux@gmail.com>
+MAINTAINER idoodler <me@idoodler.de>
 
 # Create app directory
 RUN mkdir -p /usr/src/app
