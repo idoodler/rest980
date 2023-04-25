@@ -2,15 +2,15 @@ name: 🚀 Deploy image on push/pull request
 on:
   push:
     branches:
-      - 'main'
+      - 'master'
     tags:
       - 'v*.*.*'
   pull_request:
     branches:
-      - 'main'
+      - 'master'
 jobs:
   build:
-    name: 🏗️ Building rest980
+    name: 🏗️ Building ${{ github.repository }}
     runs-on: ubuntu-latest
     steps:
       # Get the repository's code
@@ -36,9 +36,9 @@ jobs:
         with:
           # list of Docker images to use as base name for tags
           images: |
-            ghcr.io/${{ github.repository_owner }}/rest980
+            ghcr.io/${{ github.repository }}
           tags: |
-            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
