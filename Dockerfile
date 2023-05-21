@@ -1,5 +1,5 @@
 # Use latest node
-FROM arm32v6/node:10.23-alpine
+FROM node:10.23-alpine
 
 MAINTAINER idoodler <me@idoodler.de>
 
